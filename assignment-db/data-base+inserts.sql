@@ -29,6 +29,7 @@ CREATE TABLE `customer` (
   `name` varchar(255) DEFAULT NULL,
   `status` tinyint(4) NOT NULL,
   `contact_details` varchar(255) DEFAULT NULL,
+  `creation_date` datetime DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   UNIQUE KEY `name_UNIQUE` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -40,7 +41,7 @@ CREATE TABLE `customer` (
 
 LOCK TABLES `customer` WRITE;
 /*!40000 ALTER TABLE `customer` DISABLE KEYS */;
-INSERT INTO `customer` VALUES (1,'george',1,NULL),(2,'jerry',1,'nothing'),(3,'cosmo',2,'no contact details'),(4,'elaine',2,'nothing too');
+INSERT INTO `customer` VALUES (1,'george',1,NULL,'2019-03-28 02:17:34'),(2,'jerry',1,'nothing','2019-03-28 02:17:34'),(3,'cosmo',2,'no contact details','2019-03-28 02:17:34'),(4,'elaine',2,'nothing too','2019-03-28 02:17:34');
 /*!40000 ALTER TABLE `customer` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -81,4 +82,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-03-28  2:04:20
+-- Dump completed on 2019-03-28  2:21:23

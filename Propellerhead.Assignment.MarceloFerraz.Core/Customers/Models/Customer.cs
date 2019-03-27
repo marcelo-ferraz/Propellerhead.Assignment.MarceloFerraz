@@ -22,6 +22,8 @@ namespace Propellerhead.Assignment.MarceloFerraz.Core.Customers.Models
 
         public string ContactDetails { get; set; }
 
+        public DateTime CreationDate { get; set; }
+
         public void Validate()
         {
             if (Id.HasValue && this.Id.Value < 0)

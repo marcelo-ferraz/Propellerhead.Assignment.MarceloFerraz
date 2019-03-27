@@ -24,7 +24,7 @@ namespace Propellerhead.Assignment.MarceloFerraz.Core.Customers.Data
             using (var cnn = new MySqlConnection(connectionstring))
             {
                 return cnn.QueryFirst<Customer>(
-                    "select id, name, status, contact_details from customer where id = @id",
+                    "select id, name, status, contact_details, creation_date from customer where id = @id",
                     new { id });
             }
         }
