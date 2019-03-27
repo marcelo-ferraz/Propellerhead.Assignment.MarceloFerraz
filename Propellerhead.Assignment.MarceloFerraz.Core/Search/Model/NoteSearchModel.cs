@@ -11,7 +11,5 @@ namespace Propellerhead.Assignment.MarceloFerraz.Core.Search.Model
         public int CustomerId { get; set; }
 
         public string Content { get; set; }
-
-        public DateTime CreationDate { get; set; }
     }
 }

@@ -27,7 +27,7 @@ namespace Propellerhead.Assignment.MarceloFerraz.Core.Search
                     new { id });
 
                 customer.Notes = cnn
-                    .Query<NoteSearchModel>("select c.id consumer_id, n.id, n.creation_date, n.content from note n inner join customer c on n.customer_id = c.id where c.id = @id", new { id })
+                    .Query<NoteSearchModel>("select c.id consumer_id, n.id, n.content from note n inner join customer c on n.customer_id = c.id where c.id = @id", new { id })
                     .ToArray();
 
                 return customer;
@@ -43,7 +43,7 @@ namespace Propellerhead.Assignment.MarceloFerraz.Core.Search
                     .Query<CustomerSearchModel>("select Id, Name, Status, Contact_details from Customer where name like CONCAT('%', @term, '%')", new { term });
 
                 var notes = cnn.Query<NoteSearchModel>(
-                    "select c.id customer_id, n.id, n.creation_date, n.content from note n inner join customer c on n.customer_id = c.id where c.name like CONCAT('%', @term, '%')",
+                    "select c.id customer_id, n.id, n.content from note n inner join customer c on n.customer_id = c.id where c.name like CONCAT('%', @term, '%')",
                     new { term });
 
                 return customers

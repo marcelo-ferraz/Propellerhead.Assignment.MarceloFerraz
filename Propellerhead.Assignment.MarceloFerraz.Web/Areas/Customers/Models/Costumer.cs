@@ -16,5 +16,7 @@ namespace Propellerhead.Assignment.MarceloFerraz.Web.Areas.Customers.Models
         public string Name { get; set; }
 
         public string ContactDetails { get; set; }
+
+        public DateTime CreationDate { get; set; }
     }
 }

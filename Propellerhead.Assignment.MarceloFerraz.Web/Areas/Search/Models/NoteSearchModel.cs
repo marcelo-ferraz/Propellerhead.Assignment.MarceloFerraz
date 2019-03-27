@@ -9,7 +9,5 @@ namespace Propellerhead.Assignment.MarceloFerraz.Web.Areas.Search.Models
         public int Id { get; set; }
 
         public string Content { get; set; }
-
-        public DateTime CreationDate { get; set; }
     }
 }
