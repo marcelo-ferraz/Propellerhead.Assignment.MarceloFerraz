@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+
+  ph-assignment-db:
+    image: mysql:8
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: assignment
+    ports:
+      - "3308:3306"
+
+  client:
+    image: mysql:8
+    depends_on:
+      - ph-assignment-db
+    command: mysql -uroot -ppassword -hph-assignment-db assignment
